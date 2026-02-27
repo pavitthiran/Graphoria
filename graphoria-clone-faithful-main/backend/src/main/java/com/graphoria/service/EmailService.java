@@ -57,28 +57,28 @@ public class EmailService {
                     DateTimeFormatter.ofPattern("MMMM dd, yyyy 'at' hh:mm a")
             );
             
-            String emailBody = String.format(
+            String emailBody = (
                     "<html>" +
-                    "<body style='font-family: Arial, sans-serif; color: #333;'>" +
-                    "<h2 style='color: #2E7D32;'>New Project Inquiry Received</h2>" +
-                    "<p><strong>Company:</strong> Graphoria Creative Design</p>" +
-                    "<p><strong>Submission Date:</strong> %s</p>" +
-                    "<hr>" +
-                    "<h3>Client Details:</h3>" +
-                    "<p><strong>Name:</strong> %s</p>" +
-                    "<p><strong>Email:</strong> %s</p>" +
-                    "<p><strong>Phone:</strong> %s</p>" +
-                    "<hr>" +
-                    "<h3>Project Details:</h3>" +
-                    "<p><strong>Project Type:</strong> %s</p>" +
-                    "<p><strong>Budget:</strong> %s</p>" +
-                    "<hr>" +
-                    "<h3>Message:</h3>" +
-                    "<p style='background: #f5f5f5; padding: 15px; border-radius: 5px;'>%s</p>" +
-                    "<hr>" +
-                    "<p style='color: #666; font-size: 12px;'>This is an automated email from Graphoria Creative Design.</p>" +
-                    "</body>" +
-                    "</html>",
+                            "<body style='font-family: Arial, sans-serif; color: #333;'>" +
+                            "<h2 style='color: #2E7D32;'>New Project Inquiry Received</h2>" +
+                            "<p><strong>Company:</strong> Graphoria Creative Design</p>" +
+                            "<p><strong>Submission Date:</strong> %s</p>" +
+                            "<hr>" +
+                            "<h3>Client Details:</h3>" +
+                            "<p><strong>Name:</strong> %s</p>" +
+                            "<p><strong>Email:</strong> %s</p>" +
+                            "<p><strong>Phone:</strong> %s</p>" +
+                            "<hr>" +
+                            "<h3>Project Details:</h3>" +
+                            "<p><strong>Project Type:</strong> %s</p>" +
+                            "<p><strong>Budget:</strong> %s</p>" +
+                            "<hr>" +
+                            "<h3>Message:</h3>" +
+                            "<p style='background: #f5f5f5; padding: 15px; border-radius: 5px;'>%s</p>" +
+                            "<hr>" +
+                            "<p style='color: #666; font-size: 12px;'>This is an automated email from Graphoria Creative Design.</p>" +
+                            "</body>" +
+                            "</html>").formatted(
                     submissionDate,
                     contactRequest.getFullName(),
                     contactRequest.getEmail(),
