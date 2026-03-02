@@ -1,0 +1,145 @@
+package com.graphoria.service;
+
+import com.graphoria.dto.ContactRequest;
+import com.itextpdf.kernel.colors.ColorConstants;
+import com.itextpdf.kernel.colors.DeviceRgb;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Cell;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Table;
+import com.itextpdf.layout.properties.TextAlignment;
+import com.itextpdf.layout.properties.UnitValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import java.io.ByteArrayOutputStream;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+@Service
+public class PdfGenerationService {
+
+    private static final Logger logger = LoggerFactory.getLogger(PdfGenerationService.class);
+    private static final String COMPANY_NAME = "Graphoria Creative Design";
+
+    public byte[] generateContactPdf(ContactRequest contactRequest) {
+        logger.info("Generating PDF for contact request from: {}", contactRequest.getFullName());
+        
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        
+        try {
+            PdfWriter writer = new PdfWriter(outputStream);
+            PdfDocument pdf = new PdfDocument(writer);
+            Document document = new Document(pdf);
+            
+            // Title
+            Paragraph title = new Paragraph("Project Inquiry Details")
+                    .setFontSize(20)
+                    .setBold()
+                    .setTextAlignment(TextAlignment.CENTER)
+                    .setFontColor(ColorConstants.DARK_GRAY);
+            document.add(title);
+            
+            // Company Name
+            Paragraph companyName = new Paragraph(COMPANY_NAME)
+                    .setFontSize(14)
+                    .setTextAlignment(TextAlignment.CENTER)
+                    .setFontColor(new DeviceRgb(46, 125, 50)); // Green color
+            document.add(companyName);
+            
+            document.add(new Paragraph("\n"));
+            
+            // Submission Date
+            String submissionDate = LocalDateTime.now().format(
+                    DateTimeFormatter.ofPattern("MMMM dd, yyyy 'at' hh:mm a")
+            );
+            Paragraph datePara = new Paragraph("Submission Date: " + submissionDate)
+                    .setFontSize(10)
+                    .setFontColor(ColorConstants.GRAY);
+            document.add(datePara);
+            
+            document.add(new Paragraph("\n"));
+            
+            // Client Details Section
+            Paragraph clientHeader = new Paragraph("Client Details")
+                    .setFontSize(14)
+                    .setBold()
+                    .setFontColor(ColorConstants.DARK_GRAY);
+            document.add(clientHeader);
+            
+            // Client Details Table
+            Table clientTable = new Table(UnitValue.createPercentArray(new float[]{30, 70}));
+            clientTable.setWidth(UnitValue.createPercentValue(100));
+            
+            addTableRow(clientTable, "Full Name:", contactRequest.getFullName());
+            addTableRow(clientTable, "Email:", contactRequest.getEmail());
+            addTableRow(clientTable, "Phone:", contactRequest.getPhone() != null ? contactRequest.getPhone() : "Not provided");
+            
+            document.add(clientTable);
+            document.add(new Paragraph("\n"));
+            
+            // Project Details Section
+            Paragraph projectHeader = new Paragraph("Project Details")
+                    .setFontSize(14)
+                    .setBold()
+                    .setFontColor(ColorConstants.DARK_GRAY);
+            document.add(projectHeader);
+            
+            // Project Details Table
+            Table projectTable = new Table(UnitValue.createPercentArray(new float[]{30, 70}));
+            projectTable.setWidth(UnitValue.createPercentValue(100));
+            
+            addTableRow(projectTable, "Project Type:", contactRequest.getProjectType());
+            addTableRow(projectTable, "Budget:", contactRequest.getBudget() != null ? contactRequest.getBudget() : "Not specified");
+            
+            document.add(projectTable);
+            document.add(new Paragraph("\n"));
+            
+            // Message Section
+            Paragraph messageHeader = new Paragraph("Message")
+                    .setFontSize(14)
+                    .setBold()
+                    .setFontColor(ColorConstants.DARK_GRAY);
+            document.add(messageHeader);
+            
+            Paragraph messagePara = new Paragraph(contactRequest.getMessage())
+                    .setFontSize(11)
+                    .setFontColor(ColorConstants.DARK_GRAY);
+            document.add(messagePara);
+            
+            // Footer
+            document.add(new Paragraph("\n\n"));
+            Paragraph footer = new Paragraph("This is an automated email generated by " + COMPANY_NAME)
+                    .setFontSize(9)
+                    .setTextAlignment(TextAlignment.CENTER)
+                    .setFontColor(ColorConstants.GRAY);
+            document.add(footer);
+            
+            document.close();
+            logger.info("PDF generated successfully");
+            
+        } catch (Exception e) {
+            logger.error("Error generating PDF", e);
+            throw new RuntimeException("Failed to generate PDF", e);
+        }
+        
+        return outputStream.toByteArray();
+    }
+    
+    private void addTableRow(Table table, String label, String value) {
+        Cell labelCell = new Cell()
+                .add(new Paragraph(label).setBold().setFontSize(11))
+                .setBackgroundColor(ColorConstants.LIGHT_GRAY)
+                .setPadding(8);
+        
+        Cell valueCell = new Cell()
+                .add(new Paragraph(value).setFontSize(11))
+                .setPadding(8);
+        
+        table.addCell(labelCell);
+        table.addCell(valueCell);
+    }
+}
