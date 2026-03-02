@@ -109,14 +109,14 @@ const allProjects: Project[] = [
     image: krd1,
     title: "KRD Natural Food Collection",
     description: "Contemporary footwear branding and visual campaign showcasing innovative sneaker designs with dynamic angles and lifestyle positioning.",
-    tags: ["Product Photography", "Brand Identity", "Lifestyle Shoot"],
+    tags: ["Product Photography", "Brand", "Lifestyle Shoot"],
     category: "Branding"
   },
   // Say Bridal - One main project with all images
   {
     id: 3,
     slug: "say-bridal",
-    image: sb1,
+    image: sb4,
     title: "Say Bridal Couture",
     description: "Elegant bridal wear collection featuring exquisite detailing and timeless silhouettes, captured through cinematic photography.",
     tags: ["Fashion Photography", "Editorial", "Bridal Wear"],
@@ -127,9 +127,9 @@ const allProjects: Project[] = [
     id: 4,
     slug: "vasan-argo",
     image: va1,
-    title: "Vasan Argo Brand Identity",
+    title: "Vasan Argo Brand",
     description: "Professional brand identity design for Vasan Argo with modern aesthetics and innovative visual solutions.",
-    tags: ["Brand Identity", "Visual Design", "Corporate"],
+    tags: ["Brand", "Visual Design", "Corporate"],
     category: "Branding"
   },
   // Packaging - Individual entries for each packaging image

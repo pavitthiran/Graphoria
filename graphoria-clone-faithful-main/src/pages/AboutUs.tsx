@@ -163,7 +163,7 @@ const AboutUs = () => {
                 </svg>
               </div>
               <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
-                Brand Identity
+                Brand
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">
                 We craft unique brand identities that tell your story, from logo design to complete visual systems that resonate with your target audience.

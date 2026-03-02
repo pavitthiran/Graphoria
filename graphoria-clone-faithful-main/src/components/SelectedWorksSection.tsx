@@ -13,7 +13,7 @@ const projects = [
     image: portfolio1,
     title: "KRD Natural Food Collection",
     description: "Contemporary natural food branding and visual campaign showcasing innovative food products with dynamic angles and lifestyle positioning.",
-    tags: ["Product Photography", "Brand Identity", "Lifestyle Shoot"]
+    tags: ["Product Photography", "Brand", "Lifestyle Shoot"]
   },
   
   {
