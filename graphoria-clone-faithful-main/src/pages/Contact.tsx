@@ -120,6 +120,16 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      // Handle non-OK responses
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("Backend error:", response.status, errorText);
+        setSubmitStatus("error");
+        setStatusMessage(`Server error (${response.status}). Please try again.`);
+        setIsLoading(false);
+        return;
+      }
+
       const data: ApiResponse = await response.json();
 
       if (data.success) {

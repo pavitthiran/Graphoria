@@ -1,6 +1,9 @@
 com\graphoria\controller\ContactController.class
 com\graphoria\GraphoriaApplication.class
+com\graphoria\controller\TestController.class
+com\graphoria\entity\ContactRequestEntity.class
+com\graphoria\controller\GlobalExceptionHandler.class
 com\graphoria\service\PdfGenerationService.class
 com\graphoria\dto\ContactRequest.class
-com\graphoria\service\EmailService.class
+com\graphoria\repository\ContactRepository.class
 com\graphoria\dto\ApiResponse.class

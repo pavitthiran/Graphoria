@@ -1,61 +1,60 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import portfolio1 from "@/assets/Blue and red bottle/1z.jpg.jpeg";
-import portfolio2 from "@/assets/chocolate/1 jpg.jpg.jpeg";
-import portfolio3 from "@/assets/rio bottle/Rio mockup 5.png";
-import portfolio4 from "@/assets/KRD/IMG-20250630-WA0162.jpg.jpeg";
-import portfolio5 from "@/assets/Say Bridal/IMG-20250512-WA0160.jpg.jpeg";
-import portfolio6 from "@/assets/ARK/IMG-20250605-WA0102(1).jpg.jpeg";
+import portfolio1 from "@/assets/images/Branding/KRD/IMG-20250630-WA0162.jpg.jpeg";
+import portfolio2 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0160.jpg.jpeg";
+import portfolio3 from "@/assets/images/Branding/ARK/IMG-20250605-WA0105.jpg.jpeg";
+import portfolio4 from "@/assets/images/Packaging/IMG_20260208_112007.png";
+import portfolio5 from "@/assets/images/Poster/IMG-20250927-WA0037.jpg.jpeg";
+import portfolio6 from "@/assets/images/Website/Screenshot_2025-12-05-05-24-59-81_68cd479deaf2bd6348b7adee292d9ba9.jpg.jpeg";
 
 const projects = [
+  {
+    slug: "krd-footwear-1",
+    image: portfolio1,
+    title: "KRD Natural Food Collection",
+    description: "Contemporary natural food branding and visual campaign showcasing innovative food products with dynamic angles and lifestyle positioning.",
+    tags: ["Product Photography", "Brand Identity", "Lifestyle Shoot"]
+  },
+  
+  {
+    slug: "say-bridal-1",
+    image: portfolio2,
+    title: "Say Bridal Couture",
+    description: "Elegant bridal wear collection featuring exquisite detailing and timeless silhouettes, captured through cinematic photography.",
+    tags: ["Fashion Photography", "Editorial", "Bridal Wear"]
+  },
 
-{
-  slug: "touro-energy-rebrand",
-  image: portfolio1,
-  title: "Touro Energy Rebrand",
-  description: "Bold and dynamic packaging concept for Touro Energy, combining vibrant color waves with aggressive typography to create a powerful shelf presence.",
-  tags: ["Branding", "Packaging Design", "3D Mockup"]
-},
+  {
+    slug: "ark-architectural-1",
+    image: portfolio3,
+    title: "ARK Architectural Design",
+    description: "Modern architectural visualization presenting clean lines and sophisticated spaces through photorealistic 3D rendering.",
+    tags: ["Architectural Viz", "3D Rendering", "Interior Design"]
+  },
 
-{
-  slug: "madam-chocolate-series",
-  image: portfolio2,
-  title: "Madam Chocolate Series",
-  description: "Premium chocolate packaging system designed with a refined color palette and elegant branding to elevate product perception and visual consistency.",
-  tags: ["Luxury Branding", "Product Design", "Packaging"]
-},
+  {
+    slug: "packaging-1",
+    image: portfolio4,
+    title: "Premium Packaging Design",
+    description: "Bold and dynamic packaging concept combining vibrant design with innovative typography to create a powerful shelf presence.",
+    tags: ["Packaging Design", "3D Mockup", "Product Design"]
+  },
 
-{
-  slug: "rio-sparkling-campaign",
-  image: portfolio3,
-  title: "Rio Sparkling Campaign",
-  description: "High-energy beverage campaign featuring dynamic liquid splash visuals and vibrant gradients to emphasize freshness and bold flavor identity.",
-  tags: ["Advertising", "3D Visualization", "Creative Direction"]
-},
+  {
+    slug: "poster-1",
+    image: portfolio5,
+    title: "Poster Design",
+    description: "Striking poster design with bold typography and vibrant color gradients for impactful visual communication.",
+    tags: ["Poster Design", "Event Branding", "Typography"]
+  },
 
-{
-  slug: "krd-footwear-collection",
-  image: portfolio4,
-  title: "KRD Footwear Collection",
-  description: "Contemporary footwear branding and visual campaign showcasing innovative sneaker designs with dynamic angles and lifestyle positioning.",
-  tags: ["Product Photography", "Brand Identity", "Lifestyle Shoot"]
-},
-
-{
-  slug: "say-bridal-couture",
-  image: portfolio5,
-  title: "Say Bridal Couture",
-  description: "Elegant bridal wear collection featuring exquisite detailing and timeless silhouettes, captured through cinematic photography.",
-  tags: ["Fashion Photography", "Editorial", "Bridal Wear"]
-},
-
-{
-  slug: "ark-architectural-vision",
-  image: portfolio6,
-  title: "ARK Architectural Vision",
-  description: "Modern architectural visualization presenting clean lines and sophisticated spaces through photorealistic 3D rendering.",
-  tags: ["Architectural Viz", "3D Rendering", "Interior Design"]
-},
+  {
+    slug: "website-1",
+    image: portfolio6,
+    title: "Website Design",
+    description: "Modern website design featuring smooth animations and clean, user-centric interface for digital presence.",
+    tags: ["Web Design", "UI/UX", "Development"]
+  },
 
 ];
 

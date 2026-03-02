@@ -2,12 +2,82 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import portfolio1 from "@/assets/Blue and red bottle/1z.jpg.jpeg";
-import portfolio2 from "@/assets/chocolate/1 jpg.jpg.jpeg";
-import portfolio3 from "@/assets/rio bottle/Rio mockup 5.png";
-import portfolio4 from "@/assets/KRD/IMG-20250630-WA0162.jpg.jpeg";
-import portfolio5 from "@/assets/Say Bridal/IMG-20250512-WA0160.jpg.jpeg";
-import portfolio6 from "@/assets/ARK/IMG-20250605-WA0102(1).jpg.jpeg";
+
+// Branding - ARK
+import ar1 from "@/assets/images/Branding/ARK/IMG-20250605-WA0090.jpg.jpeg";
+import ar2 from "@/assets/images/Branding/ARK/IMG-20250605-WA0093.jpg.jpeg";
+import ar3 from "@/assets/images/Branding/ARK/IMG-20250605-WA0096.jpg.jpeg";
+import ar4 from "@/assets/images/Branding/ARK/IMG-20250605-WA0104.jpg.jpeg";
+import ar5 from "@/assets/images/Branding/ARK/IMG-20250605-WA0105.jpg.jpeg";
+
+// Branding - KRD
+import krd1 from "@/assets/images/Branding/KRD/IMG-20250627-WA0157.jpg.jpeg";
+import krd2 from "@/assets/images/Branding/KRD/IMG-20250627-WA0158.jpg.jpeg";
+import krd3 from "@/assets/images/Branding/KRD/IMG-20250627-WA0162.jpg.jpeg";
+import krd4 from "@/assets/images/Branding/KRD/IMG-20250627-WA0166.jpg.jpeg";
+import krd5 from "@/assets/images/Branding/KRD/IMG-20250627-WA0167.jpg.jpeg";
+import krd6 from "@/assets/images/Branding/KRD/IMG-20250627-WA0172.jpg.jpeg";
+import krd7 from "@/assets/images/Branding/KRD/IMG-20250627-WA0173.jpg.jpeg";
+import krd8 from "@/assets/images/Branding/KRD/IMG-20250627-WA0174.jpg.jpeg";
+import krd9 from "@/assets/images/Branding/KRD/IMG-20250627-WA0176.jpg.jpeg";
+import krd10 from "@/assets/images/Branding/KRD/IMG-20250630-WA0162.jpg.jpeg";
+import krd11 from "@/assets/images/Branding/KRD/IMG-20250630-WA0163.jpg.jpeg";
+import krd12 from "@/assets/images/Branding/KRD/IMG-20250630-WA0170.jpg.jpeg";
+
+// Branding - Say Bridal
+import sb1 from "@/assets/images/Branding/Say Bridal/IMG-20250425-WA0164(1).jpg.jpeg";
+import sb2 from "@/assets/images/Branding/Say Bridal/IMG-20250507-WA0142.jpg.jpeg";
+import sb3 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0152.jpg.jpeg";
+import sb4 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0158.jpg.jpeg";
+import sb5 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0159.jpg.jpeg";
+import sb6 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0160.jpg.jpeg";
+import sb7 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0162.jpg.jpeg";
+import sb8 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0164.jpg.jpeg";
+import sb9 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0166.jpg.jpeg";
+import sb10 from "@/assets/images/Branding/Say Bridal/IMG-20250512-WA0169.jpg.jpeg";
+import sb11 from "@/assets/images/Branding/Say Bridal/IMG-20250513-WA0173.jpg.jpeg";
+import sb12 from "@/assets/images/Branding/Say Bridal/IMG-20250513-WA0174.jpg.jpeg";
+import sb13 from "@/assets/images/Branding/Say Bridal/IMG-20250513-WA0175.jpg.jpeg";
+
+// Branding - Vasan Argo
+import va1 from "@/assets/images/Branding/Vasan argo/IMG_20260225_215311.jpg.jpeg";
+import va2 from "@/assets/images/Branding/Vasan argo/IMG_20260225_215324.jpg.jpeg";
+import va3 from "@/assets/images/Branding/Vasan argo/IMG_20260225_215336.jpg.jpeg";
+import va4 from "@/assets/images/Branding/Vasan argo/IMG_20260225_215349.jpg.jpeg";
+import va5 from "@/assets/images/Branding/Vasan argo/IMG_20260225_215402.jpg.jpeg";
+import va6 from "@/assets/images/Branding/Vasan argo/IMG_20260225_215414.jpg.jpeg";
+
+// Packaging
+import pkg1 from "@/assets/images/Packaging/IMG_20260208_112007.png";
+import pkg2 from "@/assets/images/Packaging/IMG_20260208_113615.png";
+import pkg3 from "@/assets/images/Packaging/IMG-20251008-WA0007.jpg.jpeg";
+import pkg4 from "@/assets/images/Packaging/IMG-20251008-WA0009.jpg.jpeg";
+import pkg5 from "@/assets/images/Packaging/IMG-20260220-WA0008.jpg.jpeg";
+import pkg6 from "@/assets/images/Packaging/IMG-20260224-WA0028.jpg.jpeg";
+import pkg7 from "@/assets/images/Packaging/IMG-20260224-WA0035.jpg.jpeg";
+
+// Poster
+import pst1 from "@/assets/images/Poster/IMG-20250927-WA0037.jpg.jpeg";
+import pst2 from "@/assets/images/Poster/IMG-20250927-WA0039.jpg.jpeg";
+import pst3 from "@/assets/images/Poster/IMG-20250927-WA0041.jpg.jpeg";
+import pst4 from "@/assets/images/Poster/IMG-20250927-WA0045.jpg.jpeg";
+import pst5 from "@/assets/images/Poster/IMG-20251026-WA0013.jpg.jpeg";
+import pst6 from "@/assets/images/Poster/IMG-20251031-WA0105.jpg.jpeg";
+import pst7 from "@/assets/images/Poster/IMG-20251109-WA0000.jpg.jpeg";
+import pst8 from "@/assets/images/Poster/IMG-20251109-WA0002.jpg.jpeg";
+import pst9 from "@/assets/images/Poster/IMG-20251109-WA0004.jpg.jpeg";
+import pst10 from "@/assets/images/Poster/IMG-20251110-WA0061.jpg.jpeg";
+import pst11 from "@/assets/images/Poster/IMG-20251115-WA0096.jpg.jpeg";
+import pst12 from "@/assets/images/Poster/IMG-20251123-WA0125.jpg.jpeg";
+import pst13 from "@/assets/images/Poster/IMG-20251124-WA0065.jpg.jpeg";
+import pst14 from "@/assets/images/Poster/IMG-20251129-WA0045.jpg.jpeg";
+
+// Website
+import web1 from "@/assets/images/Website/IMG_20260226_224229.jpg.jpeg";
+import web2 from "@/assets/images/Website/IMG-20250512-WA0165.jpg.jpeg";
+import web3 from "@/assets/images/Website/IMG-20250605-WA0110.jpg.jpeg";
+import web4 from "@/assets/images/Website/IMG-20250630-WA0164.jpg.jpeg";
+import web5 from "@/assets/images/Website/Screenshot_2025-12-05-05-24-59-81_68cd479deaf2bd6348b7adee292d9ba9.jpg.jpeg";
 
 interface Project {
   id: number;
@@ -40,144 +110,15 @@ interface Project {
 }
 
 const allProjects: Project[] = [
+  // ARK - Show ALL ARK images
   {
     id: 1,
-    slug: "touro-energy-rebrand",
-    image: portfolio1,
-    title: "Touro Energy Rebrand",
-    shortSummary: "Bold and dynamic packaging concept for Touro Energy",
-    description: "Bold and dynamic packaging concept for Touro Energy, combining vibrant color waves with aggressive typography to create a powerful shelf presence.",
-    category: "Packaging",
-    tags: ["Branding", "Packaging Design", "3D Mockup"],
-    client: "Touro Energy is a leading energy drink brand seeking to revamp their visual identity to stand out in a crowded marketplace.",
-    problem: "The client faced challenges with their outdated brand identity that failed to resonate with younger audiences and lacked shelf presence among competitors.",
-    goals: ["Create a bold, dynamic visual identity", "Develop packaging that stands out on shelves", "Appeal to the target demographic of young adults"],
-    approach: {
-      research: "We conducted market research analyzing competitor packaging, surveyed target demographics, and studied color psychology in energy drink marketing.",
-      direction: "Our creative direction focused on aggressive typography combined with vibrant color waves to convey energy and power.",
-      execution: "We developed comprehensive brand guidelines, created 3D mockups, and designed packaging that commands attention on retail shelves."
-    },
-    images: [portfolio1, portfolio1, portfolio1],
-    results: {
-      impact: "Sales increased by 45% within the first quarter of rebranding",
-      brandImprovement: "Brand recognition improved by 60% among target demographics",
-      positioning: "Established as a premium, bold choice in the energy drink market"
-    },
-    testimonial: {
-      quote: "Graphoria transformed our brand completely. The new packaging has completely changed how customers perceive us.",
-      author: "John Smith",
-      role: "CEO, Touro Energy"
-    }
-  },
-  {
-    id: 2,
-    slug: "madam-chocolate-series",
-    image: portfolio2,
-    title: "Madam Chocolate Series",
-    shortSummary: "Premium chocolate packaging system with refined aesthetics",
-    description: "Premium chocolate packaging system designed with a refined color palette and elegant branding to elevate product perception and visual consistency.",
-    category: "Packaging",
-    tags: ["Luxury Branding", "Product Design", "Packaging"],
-    client: "Madam Chocolate is a premium artisanal chocolate brand seeking to elevate their product presentation.",
-    problem: "The brand lacked a cohesive packaging system that reflected their premium positioning in the luxury chocolate market.",
-    goals: ["Develop a cohesive packaging system", "Create a luxurious unboxing experience", "Ensure visual consistency across product lines"],
-    approach: {
-      research: "We researched luxury packaging trends, studied premium chocolate brands, and analyzed color psychology in luxury goods.",
-      direction: "Our direction emphasized refined color palettes, elegant typography, and premium materials.",
-      execution: "We created a complete packaging system with custom boxes, wrappers, and branded materials."
-    },
-    images: [portfolio2, portfolio2, portfolio2],
-    results: {
-      impact: "Customer satisfaction scores increased by 35%",
-      brandImprovement: "Positioned as a luxury gifting option",
-      positioning: "Became the go-to choice for premium chocolate gifts"
-    }
-  },
-  {
-    id: 3,
-    slug: "rio-sparkling-campaign",
-    image: portfolio3,
-    title: "Rio Sparkling Campaign",
-    shortSummary: "High-energy beverage campaign with dynamic visuals",
-    description: "High-energy beverage campaign featuring dynamic liquid splash visuals and vibrant gradients to emphasize freshness and bold flavor identity.",
-    category: "Branding",
-    tags: ["Advertising", "3D Visualization", "Creative Direction"],
-    client: "Rio Sparkling is a new entrant in the premium sparkling water market.",
-    problem: "The challenge was to create an instantly recognizable brand that would stand out among established competitors.",
-    goals: ["Create a memorable brand identity", "Develop eye-catching advertising materials", "Establish a strong market presence"],
-    approach: {
-      research: "We analyzed the beverage industry landscape, researched consumer preferences, and studied successful beverage campaigns.",
-      direction: "Our creative approach used dynamic liquid splash visuals and vibrant gradients to convey freshness and energy.",
-      execution: "We produced a comprehensive advertising campaign including print, digital, and point-of-sale materials."
-    },
-    images: [portfolio3, portfolio3, portfolio3],
-    results: {
-      impact: "Achieved 80% brand awareness within 6 months",
-      brandImprovement: "Recognized as an innovative new brand in the category",
-      positioning: "Positioned as a premium, trendsetting choice"
-    },
-    testimonial: {
-      quote: "The campaign exceeded all our expectations. Graphoria truly understood our vision.",
-      author: "Maria Garcia",
-      role: "Marketing Director, Rio Sparkling"
-    }
-  },
-  {
-    id: 4,
-    slug: "krd-footwear-collection",
-    image: portfolio4,
-    title: "KRD Footwear Collection",
-    shortSummary: "Contemporary footwear branding and visual campaign",
-    description: "Contemporary footwear branding and visual campaign showcasing innovative sneaker designs with dynamic angles and lifestyle positioning.",
-    category: "Branding",
-    tags: ["Product Photography", "Brand Identity", "Lifestyle Shoot"],
-    client: "KRD is an emerging footwear brand targeting fashion-forward young adults.",
-    problem: "The brand needed a complete visual identity that would appeal to their target audience and compete with established sneaker brands.",
-    goals: ["Create a distinctive brand identity", "Develop compelling visual content", "Establish a strong social media presence"],
-    approach: {
-      research: "We researched sneaker culture, studied competitor branding, and identified key lifestyle themes for the target audience.",
-      direction: "Our approach featured dynamic angles, lifestyle positioning, and contemporary aesthetics.",
-      execution: "We produced a complete brand identity system and lifestyle photography campaign."
-    },
-    images: [portfolio4, portfolio4, portfolio4],
-    results: {
-      impact: "Social media engagement increased by 200%",
-      brandImprovement: "Established a loyal following among sneaker enthusiasts",
-      positioning: "Positioned as a must-have brand for footwear enthusiasts"
-    }
-  },
-  {
-    id: 5,
-    slug: "say-bridal-couture",
-    image: portfolio5,
-    title: "Say Bridal Couture",
-    shortSummary: "Elegant bridal wear collection with cinematic photography",
-    description: "Elegant bridal wear collection featuring exquisite detailing and timeless silhouettes, captured through cinematic photography.",
-    category: "Photography",
-    tags: ["Fashion Photography", "Editorial", "Brimonial Wear"],
-    client: "Say Bridal is a high-end bridal wear designer seeking to showcase their collection.",
-    problem: "The challenge was to create visual content that captures the elegance and romance of bridal wear.",
-    goals: ["Create stunning visual content", "Showcase collection details", "Build brand awareness in bridal fashion"],
-    approach: {
-      research: "We studied bridal fashion trends, researched editorial photography styles, and planned cinematic compositions.",
-      direction: "Our approach emphasized timeless silhouettes, exquisite details, and romantic lighting.",
-      execution: "We produced a comprehensive editorial campaign with cinematic photography."
-    },
-    images: [portfolio5, portfolio5, portfolio5],
-    results: {
-      impact: "Featured in 5 major bridal fashion publications",
-      brandImprovement: "Established as a top bridal designer",
-      positioning: "Go-to choice for elegant bridal wear"
-    }
-  },
-  {
-    id: 6,
-    slug: "ark-architectural-vision",
-    image: portfolio6,
+    slug: "ark-architectural",
+    image: ar1,
     title: "ARK Architectural Vision",
-    shortSummary: "Modern architectural visualization with photorealistic rendering",
+    shortSummary: "Modern architectural visualization with clean lines",
     description: "Modern architectural visualization presenting clean lines and sophisticated spaces through photorealistic 3D rendering.",
-    category: "Architecture",
+    category: "Branding",
     tags: ["Architectural Viz", "3D Rendering", "Interior Design"],
     client: "ARK is an architecture firm specializing in modern residential and commercial projects.",
     problem: "The firm needed high-quality 3D visualizations to help clients understand their architectural designs.",
@@ -187,11 +128,713 @@ const allProjects: Project[] = [
       direction: "Our approach emphasized clean lines, sophisticated spaces, and photorealistic quality.",
       execution: "We produced comprehensive 3D renderings and walkthrough animations."
     },
-    images: [portfolio6, portfolio6, portfolio6],
+    images: [ar1, ar2, ar3, ar4, ar5],
     results: {
       impact: "Client conversion rate improved by 50%",
       brandImprovement: "Positioned as a technology-forward firm",
       positioning: "Established as a leader in architectural visualization"
+    }
+  },
+  // KRD - Show ALL KRD images
+  {
+    id: 2,
+    slug: "krd-footwear",
+    image: krd1,
+    title: "KRD Natural Food Collection",
+    shortSummary: "Contemporary  Natural food branding and visual campaign",
+    description: "Contemporary natural food branding and visual campaign showcasing innovative food products with dynamic angles and lifestyle positioning.",
+    category: "Branding",
+    tags: ["Product Photography", "Brand Identity", "Lifestyle Shoot"],
+    client: "KRD is an emerging natural food brand targeting health-conscious consumers.",
+    problem: "The brand needed a complete visual identity that would appeal to their target audience and compete with established natural food brands.",
+    goals: ["Create a distinctive brand identity", "Develop compelling visual content", "Establish a strong social media presence"],
+    approach: {
+      research: "We researched natural food trends, studied competitor branding, and identified key lifestyle themes for the target audience.",
+      direction: "Our approach featured dynamic angles, lifestyle positioning, and contemporary aesthetics.",
+      execution: "We produced a complete brand identity system and lifestyle photography campaign."
+    },
+    images: [krd1, krd2, krd3, krd4, krd5, krd6, krd7, krd8, krd9, krd10, krd11, krd12],
+    results: {
+      impact: "Social media engagement increased by 200%",
+      brandImprovement: "Established a loyal following among natural food enthusiasts",
+      positioning: "Positioned as a must-have brand for natural food consumers"
+    }
+  },
+  // Say Bridal - Show ALL Say Bridal images
+  {
+    id: 3,
+    slug: "say-bridal",
+    image: sb1,
+    title: "Say Bridal Couture",
+    shortSummary: "Elegant bridal wear collection with cinematic photography",
+    description: "Elegant bridal wear collection featuring exquisite detailing and timeless silhouettes, captured through cinematic photography.",
+    category: "Branding",
+    tags: ["Fashion Photography", "Editorial", "Bridal Wear"],
+    client: "Say Bridal is a high-end bridal wear designer seeking to showcase their collection.",
+    problem: "The challenge was to create visual content that captures the elegance and romance of bridal wear.",
+    goals: ["Create stunning visual content", "Showcase collection details", "Build brand awareness in bridal fashion"],
+    approach: {
+      research: "We studied bridal fashion trends, researched editorial photography styles, and planned cinematic compositions.",
+      direction: "Our approach emphasized timeless silhouettes, exquisite details, and romantic lighting.",
+      execution: "We produced a comprehensive editorial campaign with cinematic photography."
+    },
+    images: [sb1, sb2, sb3, sb4, sb5, sb6, sb7, sb8, sb9, sb10, sb11, sb12, sb13],
+    results: {
+      impact: "Featured in 5 major bridal fashion publications",
+      brandImprovement: "Established as a top bridal designer",
+      positioning: "Go-to choice for elegant bridal wear"
+    }
+  },
+  // Vasan Argo - Show ALL Vasan Argo images
+  {
+    id: 4,
+    slug: "vasan-argo",
+    image: va1,
+    title: "Vasan Argo Brand Identity",
+    shortSummary: "Professional corporate brand identity design",
+    description: "Professional brand identity design for Vasan Argo with modern aesthetics and innovative visual solutions.",
+    category: "Branding",
+    tags: ["Brand Identity", "Visual Design", "Corporate"],
+    client: "Vasan Argo is a corporate entity seeking to establish a strong brand presence.",
+    problem: "The company needed a comprehensive brand identity that communicates professionalism and innovation.",
+    goals: ["Create a distinctive brand identity", "Develop visual guidelines", "Establish market presence"],
+    approach: {
+      research: "We analyzed industry trends, studied target audience preferences, and researched competitor branding.",
+      direction: "Our approach focused on modern aesthetics with professional undertones.",
+      execution: "We developed comprehensive brand guidelines and visual assets."
+    },
+    images: [va1, va2, va3, va4, va5, va6],
+    results: {
+      impact: "Brand recognition increased by 75%",
+      brandImprovement: "Established as a professional industry leader",
+      positioning: "Positioned as a premium corporate choice"
+    }
+  },
+  // Packaging - Individual entries
+  {
+    id: 5,
+    slug: "packaging-1",
+    image: pkg1,
+    title: "Nikol Premium Packaging Design",
+    shortSummary: "Bold and dynamic packaging concept",
+    description: "Bold and dynamic packaging concept combining vibrant design with innovative typography to create a powerful shelf presence.",
+    category: "Packaging",
+    tags: ["Packaging Design", "3D Mockup", "Product Design"],
+    client: "A leading brand seeking to revamp their visual identity.",
+    problem: "The client faced challenges with their outdated packaging that lacked shelf presence among competitors.",
+    goals: ["Create a bold, dynamic visual identity", "Develop packaging that stands out on shelves", "Appeal to target demographics"],
+    approach: {
+      research: "We conducted market research analyzing competitor packaging and target demographics.",
+      direction: "Our creative direction focused on innovative design combined with vibrant visuals.",
+      execution: "We developed comprehensive brand guidelines, created 3D mockups, and designed packaging."
+    },
+    images: [pkg1],
+    results: {
+      impact: "Sales increased by 45% within the first quarter",
+      brandImprovement: "Brand recognition improved by 60%",
+      positioning: "Established as a premium, bold choice in the market"
+    }
+  },
+  {
+    id: 6,
+    slug: "packaging-2",
+    image: pkg2,
+    title: "Nikol Premium Packaging Design 2",
+    shortSummary: "Creative packaging solution",
+    description: "Creative packaging solution with modern design elements and striking visual appeal.",
+    category: "Packaging",
+    tags: ["Packaging Design", "Branding", "Product Design"],
+    client: "A leading brand seeking to revamp their visual identity.",
+    problem: "The client needed innovative packaging design.",
+    goals: ["Create innovative packaging", "Develop unique visual identity", "Stand out on shelves"],
+    approach: {
+      research: "We researched packaging trends and consumer preferences.",
+      direction: "Modern design with striking visuals.",
+      execution: "We created innovative packaging solutions."
+    },
+    images: [pkg2],
+    results: {
+      impact: "Customer engagement increased",
+      brandImprovement: "Brand visibility improved",
+      positioning: "Positioned as innovative"
+    }
+  },
+  {
+    id: 7,
+    slug: "packaging-3",
+    image: pkg3,
+    title: "Mettle Packaging Design",
+    shortSummary: "Innovative packaging concept",
+    description: "Innovative packaging concept with unique structural design and vibrant graphics.",
+    category: "Packaging",
+    tags: ["Packaging", "Graphic Design", "Product"],
+    client: "A brand seeking unique packaging.",
+    problem: "Needed unique packaging to differentiate.",
+    goals: ["Create unique design", "Differentiate from competitors"],
+    approach: {
+      research: "Market analysis.",
+      direction: "Unique structural design.",
+      execution: "Created innovative packaging."
+    },
+    images: [pkg3],
+    results: {
+      impact: "Differentiation achieved",
+      brandImprovement: "Visual identity strengthened",
+      positioning: "Market presence increased"
+    }
+  },
+  {
+    id: 8,
+    slug: "packaging-4",
+    image: pkg4,
+    title: "Mettle Packaging Design 2",
+    shortSummary: "Eye-catching packaging design",
+    description: "Eye-catching packaging design that stands out on shelves with bold colors.",
+    category: "Packaging",
+    tags: ["Packaging", "Brand Design", "Visual"],
+    client: "A brand seeking bold packaging.",
+    problem: "Needed bold colors to attract attention.",
+    goals: ["Create bold design", "Attract consumer attention"],
+    approach: {
+      research: "Color psychology research.",
+      direction: "Bold color scheme.",
+      execution: "Designed eye-catching packaging."
+    },
+    images: [pkg4],
+    results: {
+      impact: "Attention captured",
+      brandImprovement: "Brand recall improved",
+      positioning: "Positioned as bold"
+    }
+  },
+  {
+    id: 9,
+    slug: "packaging-5",
+    image: pkg5,
+    title: "Poptail Packaging Design",
+    shortSummary: "Professional packaging solution",
+    description: "Professional packaging solution with elegant typography and layout.",
+    category: "Packaging",
+    tags: ["Packaging", "Typography", "Design"],
+    client: "A professional brand.",
+    problem: "Needed professional packaging.",
+    goals: ["Create professional design", "Convey professionalism"],
+    approach: {
+      research: "Professional design standards.",
+      direction: "Elegant typography.",
+      execution: "Created professional packaging."
+    },
+    images: [pkg5],
+    results: {
+      impact: "Professional image enhanced",
+      brandImprovement: "Credibility increased",
+      positioning: "Positioned as professional"
+    }
+  },
+  {
+    id: 10,
+    slug: "packaging-6",
+    image: pkg6,
+    title: "Vacay Packaging Design",
+    shortSummary: "Modern packaging design",
+    description: "Modern packaging design featuring clean lines and contemporary aesthetics.",
+    category: "Packaging",
+    tags: ["Packaging", "Modern Design", "Product"],
+    client: "A modern brand.",
+    problem: "Needed modern packaging.",
+    goals: ["Create modern design"],
+    approach: {
+      research: "Modern design trends.",
+      direction: "Clean lines.",
+      execution: "Created modern packaging."
+    },
+    images: [pkg6],
+    results: {
+      impact: "Modern appeal achieved",
+      brandImprovement: "Contemporary image",
+      positioning: "Positioned as modern"
+    }
+  },
+  {
+    id: 11,
+    slug: "packaging-7",
+    image: pkg7,
+    title: "Vacay Packaging Design 2",
+    shortSummary: "Premium packaging design",
+    description: "Premium packaging design with sophisticated visual elements.",
+    category: "Packaging",
+    tags: ["Packaging", "Premium", "Design"],
+    client: "A premium brand.",
+    problem: "Needed premium packaging.",
+    goals: ["Create premium design"],
+    approach: {
+      research: "Premium design standards.",
+      direction: "Sophisticated elements.",
+      execution: "Created premium packaging."
+    },
+    images: [pkg7],
+    results: {
+      impact: "Premium image enhanced",
+      brandImprovement: "Luxury positioning",
+      positioning: "Positioned as premium"
+    }
+  },
+  // Poster - Individual entries
+  {
+    id: 12,
+    slug: "poster-1",
+    image: pst1,
+    title: "Joystick Poster Design",
+    shortSummary: "Striking poster design with bold typography",
+    description: "Striking poster design with bold typography and vibrant color gradients for impactful visual communication.",
+    category: "Posters",
+    tags: ["Poster Design", "Event Branding", "Typography"],
+    client: "Event organizers seeking impactful promotional materials.",
+    problem: "Needed eye-catching designs to attract attention and communicate event themes effectively.",
+    goals: ["Create visually striking designs", "Communicate event themes", "Attract target audience"],
+    approach: {
+      research: "We analyzed event themes, studied target audience preferences, and researched design trends.",
+      direction: "Our approach used bold typography combined with vibrant colors.",
+      execution: "We produced comprehensive poster designs for various media."
+    },
+    images: [pst1],
+    results: {
+      impact: "Event attendance increased by 60%",
+      brandImprovement: "Established strong visual presence",
+      positioning: "Positioned as a premium event brand"
+    }
+  },
+  {
+    id: 13,
+    slug: "poster-2",
+    image: pst2,
+    title: "Earbuds Poster Design",
+    shortSummary: "Creative poster design",
+    description: "Creative poster design featuring dynamic composition and eye-catching visuals.",
+    category: "Posters",
+    tags: ["Poster", "Graphic Design", "Visual"],
+    client: "Event organizers.",
+    problem: "Needed creative poster designs.",
+    goals: ["Create creative designs"],
+    approach: {
+      research: "Design research.",
+      direction: "Dynamic composition.",
+      execution: "Created posters."
+    },
+    images: [pst2],
+    results: {
+      impact: "Engagement increased",
+      brandImprovement: "Visual appeal improved",
+      positioning: "Positioned as creative"
+    }
+  },
+  {
+    id: 14,
+    slug: "poster-3",
+    image: pst3,
+    title: "Gaming mouse Poster Design",
+    shortSummary: "Bold poster design",
+    description: "Bold poster design with strong visual impact and modern aesthetics.",
+    category: "Posters",
+    tags: ["Poster Design", "Branding", "Art"],
+    client: "Event organizers.",
+    problem: "Needed bold designs.",
+    goals: ["Create bold designs"],
+    approach: {
+      research: "Bold design research.",
+      direction: "Strong visual impact.",
+      execution: "Created bold posters."
+    },
+    images: [pst3],
+    results: {
+      impact: "Impact achieved",
+      brandImprovement: "Visual impact increased",
+      positioning: "Positioned as bold"
+    }
+  },
+  {
+    id: 15,
+    slug: "poster-4",
+    image: pst4,
+    title: "Bluetooth speaker Poster Design",
+    shortSummary: "Contemporary poster design",
+    description: "Contemporary poster design with innovative layout and color scheme.",
+    category: "Posters",
+    tags: ["Poster", "Modern Design", "Graphics"],
+    client: "Event organizers.",
+    problem: "Needed contemporary designs.",
+    goals: ["Create contemporary designs"],
+    approach: {
+      research: "Contemporary trends.",
+      direction: "Innovative layout.",
+      execution: "Created contemporary posters."
+    },
+    images: [pst4],
+    results: {
+      impact: "Contemporary appeal achieved",
+      brandImprovement: "Modern image",
+      positioning: "Positioned as contemporary"
+    }
+  },
+  {
+    id: 16,
+    slug: "poster-5",
+    image: pst5,
+    title: "Fastion Poster Design",
+    shortSummary: "Artistic poster design",
+    description: "Artistic poster design showcasing creative expression and visual storytelling.",
+    category: "Posters",
+    tags: ["Poster Design", "Artistic", "Creative"],
+    client: "Event organizers.",
+    problem: "Needed artistic designs.",
+    goals: ["Create artistic designs"],
+    approach: {
+      research: "Artistic research.",
+      direction: "Creative expression.",
+      execution: "Created artistic posters."
+    },
+    images: [pst5],
+    results: {
+      impact: "Artistic expression achieved",
+      brandImprovement: "Creative image",
+      positioning: "Positioned as artistic"
+    }
+  },
+  {
+    id: 17,
+    slug: "poster-6",
+    image: pst6,
+    title: "Orange juice Poster Design",
+    shortSummary: "Dynamic poster design",
+    description: "Dynamic poster design with energetic visuals and compelling composition.",
+    category: "Posters",
+    tags: ["Poster", "Dynamic", "Design"],
+    client: "Event organizers.",
+    problem: "Needed dynamic designs.",
+    goals: ["Create dynamic designs"],
+    approach: {
+      research: "Dynamic design research.",
+      direction: "Energetic visuals.",
+      execution: "Created dynamic posters."
+    },
+    images: [pst6],
+    results: {
+      impact: "Energy conveyed",
+      brandImprovement: "Dynamic image",
+      positioning: "Positioned as dynamic"
+    }
+  },
+  {
+    id: 18,
+    slug: "poster-7",
+    image: pst7,
+    title: "Watter bottle Poster Design",
+    shortSummary: "Professional poster design",
+    description: "Professional poster design for events and promotions.",
+    category: "Posters",
+    tags: ["Poster Design", "Event", "Promotion"],
+    client: "Event organizers.",
+    problem: "Needed professional designs.",
+    goals: ["Create professional designs"],
+    approach: {
+      research: "Professional design.",
+      direction: "Event focus.",
+      execution: "Created professional posters."
+    },
+    images: [pst7],
+    results: {
+      impact: "Professional image enhanced",
+      brandImprovement: "Event success",
+      positioning: "Positioned as professional"
+    }
+  },
+  {
+    id: 19,
+    slug: "poster-8",
+    image: pst8,
+    title: "Monster Drink Poster Design",
+    shortSummary: "Vibrant poster design",
+    description: "Vibrant poster design with bold colors and impactful messaging.",
+    category: "Posters",
+    tags: ["Poster", "Vibrant", "Marketing"],
+    client: "Event organizers.",
+    problem: "Needed vibrant designs.",
+    goals: ["Create vibrant designs"],
+    approach: {
+      research: "Color research.",
+      direction: "Bold colors.",
+      execution: "Created vibrant posters."
+    },
+    images: [pst8],
+    results: {
+      impact: "Vibrant message conveyed",
+      brandImprovement: "Marketing effectiveness",
+      positioning: "Positioned as vibrant"
+    }
+  },
+  {
+    id: 20,
+    slug: "poster-9",
+    image: pst9,
+    title: "Beer Poster Design",
+    shortSummary: "Modern poster design",
+    description: "Modern poster design with clean typography and contemporary style.",
+    category: "Posters",
+    tags: ["Poster Design", "Modern", "Clean"],
+    client: "Event organizers.",
+    problem: "Needed modern designs.",
+    goals: ["Create modern designs"],
+    approach: {
+      research: "Modern trends.",
+      direction: "Clean typography.",
+      execution: "Created modern posters."
+    },
+    images: [pst9],
+    results: {
+      impact: "Modern appeal achieved",
+      brandImprovement: "Contemporary image",
+      positioning: "Positioned as modern"
+    }
+  },
+  {
+    id: 21,
+    slug: "poster-10",
+    image: pst10,
+    title: "Camera Poster Design",
+    shortSummary: "Creative poster design",
+    description: "Creative poster design with unique visual approach.",
+    category: "Posters",
+    tags: ["Poster", "Creative", "Visual"],
+    client: "Event organizers.",
+    problem: "Needed unique designs.",
+    goals: ["Create unique designs"],
+    approach: {
+      research: "Unique approach.",
+      direction: "Visual distinction.",
+      execution: "Created unique posters."
+    },
+    images: [pst10],
+    results: {
+      impact: "Uniqueness achieved",
+      brandImprovement: "Distinctive image",
+      positioning: "Positioned as unique"
+    }
+  },
+  {
+    id: 22,
+    slug: "poster-11",
+    image: pst11,
+    title: "Blueberry juice Poster Design",
+    shortSummary: "Stylish poster design",
+    description: "Stylish poster design featuring elegant design elements.",
+    category: "Posters",
+    tags: ["Poster Design", "Stylish", "Elegant"],
+    client: "Event organizers.",
+    problem: "Needed stylish designs.",
+    goals: ["Create stylish designs"],
+    approach: {
+      research: "Style research.",
+      direction: "Elegant elements.",
+      execution: "Created stylish posters."
+    },
+    images: [pst11],
+    results: {
+      impact: "Style conveyed",
+      brandImprovement: "Elegant image",
+      positioning: "Positioned as stylish"
+    }
+  },
+  {
+    id: 23,
+    slug: "poster-12",
+    image: pst12,
+    title: "Car Poster Design",
+    shortSummary: "Innovative poster design",
+    description: "Innovative poster design with creative visual solutions.",
+    category: "Posters",
+    tags: ["Poster", "Innovative", "Design"],
+    client: "Event organizers.",
+    problem: "Needed innovative designs.",
+    goals: ["Create innovative designs"],
+    approach: {
+      research: "Innovation research.",
+      direction: "Creative solutions.",
+      execution: "Created innovative posters."
+    },
+    images: [pst12],
+    results: {
+      impact: "Innovation achieved",
+      brandImprovement: "Creative image",
+      positioning: "Positioned as innovative"
+    }
+  },
+  {
+    id: 24,
+    slug: "poster-13",
+    image: pst13,
+    title: "Gym Poster Design",
+    shortSummary: "Eye-catching poster design",
+    description: "Eye-catching poster design with striking visual effects.",
+    category: "Posters",
+    tags: ["Poster Design", "Eye-Catching", "Effects"],
+    client: "Event organizers.",
+    problem: "Needed eye-catching designs.",
+    goals: ["Create eye-catching designs"],
+    approach: {
+      research: "Eye-catching research.",
+      direction: "Striking effects.",
+      execution: "Created eye-catching posters."
+    },
+    images: [pst13],
+    results: {
+      impact: "Attention captured",
+      brandImprovement: "Visual impact",
+      positioning: "Positioned as eye-catching"
+    }
+  },
+  {
+    id: 25,
+    slug: "poster-14",
+    image: pst14,
+    title: "Professional Poster Design",
+    shortSummary: "Professional poster design",
+    description: "Professional poster design with polished aesthetics.",
+    category: "Posters",
+    tags: ["Poster", "Professional", "Polished"],
+    client: "Event organizers.",
+    problem: "Needed polished designs.",
+    goals: ["Create polished designs"],
+    approach: {
+      research: "Polished standards.",
+      direction: "Professional aesthetics.",
+      execution: "Created polished posters."
+    },
+    images: [pst14],
+    results: {
+      impact: "Professional image enhanced",
+      brandImprovement: "Polished appearance",
+      positioning: "Positioned as professional"
+    }
+  },
+  // Website - Individual entries
+  {
+    id: 26,
+    slug: "website-1",
+    image: web1,
+    title: "vacay Website Design",
+    shortSummary: "Clean and user-centric website interface",
+    description: "Modern website design featuring smooth animations and clean, user-centric interface for digital presence.",
+    category: "Websites",
+    tags: ["Web Design", "UI/UX", "Development"],
+    client: "A tech startup seeking to establish their digital presence.",
+    problem: "Needed a modern website that effectively communicates their value proposition.",
+    goals: ["Create a modern, user-friendly website", "Improve user experience", "Establish digital presence"],
+    approach: {
+      research: "We analyzed user needs, studied competitor websites, and researched design trends.",
+      direction: "Our approach focused on clean aesthetics with intuitive navigation.",
+      execution: "We developed a complete website with responsive design and smooth animations."
+    },
+    images: [web1],
+    results: {
+      impact: "User engagement increased by 80%",
+      brandImprovement: "Established strong digital presence",
+      positioning: "Positioned as a modern tech brand"
+    }
+  },
+  {
+    id: 27,
+    slug: "website-2",
+    image: web2,
+    title: "Say bridal Website Design",
+    shortSummary: "Responsive website design",
+    description: "Responsive website design with intuitive navigation and modern aesthetics.",
+    category: "Websites",
+    tags: ["Web Design", "Responsive", "UI"],
+    client: "A business seeking responsive design.",
+    problem: "Needed responsive website.",
+    goals: ["Create responsive design"],
+    approach: {
+      research: "Responsive design research.",
+      direction: "Intuitive navigation.",
+      execution: "Created responsive website."
+    },
+    images: [web2],
+    results: {
+      impact: "Mobile users increased",
+      brandImprovement: "Better user experience",
+      positioning: "Positioned as responsive"
+    }
+  },
+  {
+    id: 28,
+    slug: "website-3",
+    image: web3,
+    title: "ARk Website Design",
+    shortSummary: "Creative website design",
+    description: "Creative website design with innovative features and engaging user experience.",
+    category: "Websites",
+    tags: ["Web Design", "Creative", "UX"],
+    client: "A creative business.",
+    problem: "Needed creative website.",
+    goals: ["Create creative design"],
+    approach: {
+      research: "Creative design research.",
+      direction: "Innovative features.",
+      execution: "Created creative website."
+    },
+    images: [web3],
+    results: {
+      impact: "Engagement increased",
+      brandImprovement: "Creative image",
+      positioning: "Positioned as creative"
+    }
+  },
+  {
+    id: 29,
+    slug: "website-4",
+    image: web4,
+    title: "KRD Website Design",
+    shortSummary: "Professional website design",
+    description: "Professional website design with elegant layout and seamless functionality.",
+    category: "Websites",
+    tags: ["Web Design", "Professional", "Development"],
+    client: "A professional business.",
+    problem: "Needed professional website.",
+    goals: ["Create professional design"],
+    approach: {
+      research: "Professional standards.",
+      direction: "Elegant layout.",
+      execution: "Created professional website."
+    },
+    images: [web4],
+    results: {
+      impact: "Professional image enhanced",
+      brandImprovement: "Credibility increased",
+      positioning: "Positioned as professional"
+    }
+  },
+  {
+    id: 30,
+    slug: "website-5",
+    image: web5,
+    title: "Vasan Agro Website Design",
+    shortSummary: "Sleek website design",
+    description: "Sleek website design with modern interface and optimized performance.",
+    category: "Websites",
+    tags: ["Web Design", "Sleek", "Performance"],
+    client: "A modern business.",
+    problem: "Needed sleek website.",
+    goals: ["Create sleek design"],
+    approach: {
+      research: "Sleek design research.",
+      direction: "Modern interface.",
+      execution: "Created sleek website."
+    },
+    images: [web5],
+    results: {
+      impact: "Performance optimized",
+      brandImprovement: "Modern image",
+      positioning: "Positioned as sleek"
     }
   }
 ];
@@ -200,6 +843,7 @@ const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const project = allProjects.find(p => p.slug === slug);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   
   const currentIndex = allProjects.findIndex(p => p.slug === slug);
   const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : allProjects[0];
@@ -366,24 +1010,89 @@ const ProjectDetail = () => {
             </span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-6">
             {project.images.map((img, index) => (
               <div 
                 key={index} 
-                className={`relative aspect-[4/3] rounded-2xl overflow-hidden ${
-                  index === 0 ? 'md:col-span-2' : ''
-                }`}
+                className="w-full rounded-2xl overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImageIndex(index)}
               >
                 <img 
                   src={img} 
                   alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto hover:opacity-90 transition-opacity"
                 />
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {selectedImageIndex !== null && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          onClick={() => setSelectedImageIndex(null)}
+        >
+          {/* Close Button */}
+          <button 
+            className="absolute top-4 right-4 w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors z-10"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImageIndex(null);
+            }}
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Previous Button */}
+          {project.images.length > 1 && (
+            <button 
+              className="absolute left-4 w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors bg-black/50 rounded-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImageIndex(selectedImageIndex > 0 ? selectedImageIndex - 1 : project.images.length - 1);
+              }}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          )}
+
+          {/* Next Button */}
+          {project.images.length > 1 && (
+            <button 
+              className="absolute right-4 w-12 h-12 flex items-center justify-center text-white hover:text-primary transition-colors bg-black/50 rounded-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImageIndex(selectedImageIndex < project.images.length - 1 ? selectedImageIndex + 1 : 0);
+              }}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          )}
+          
+          {/* Full Screen Image */}
+          <img 
+            src={project.images[selectedImageIndex]} 
+            alt="Full screen view"
+            className="max-w-[90vw] max-h-[90vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* Image Counter */}
+          {project.images.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+              {selectedImageIndex + 1} / {project.images.length}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Results */}
       <section className="py-20 px-6 md:px-12">

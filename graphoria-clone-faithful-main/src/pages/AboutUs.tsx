@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import graphoriaLogo from "@/assets/graphoria-logo.png";
-import portfolio1 from "@/assets/Blue and red bottle/1z.jpg.jpeg";
-import portfolio2 from "@/assets/chocolate/1 jpg.jpg.jpeg";
-import portfolio3 from "@/assets/rio bottle/Rio mockup 5.png";
+// TODO: Add missing image assets
+// import portfolio1 from "@/assets/Blue and red bottle/1z.jpg.jpeg";
+// import portfolio2 from "@/assets/chocolate/1 jpg.jpg.jpeg";
+// import portfolio3 from "@/assets/rio bottle/Rio mockup 5.png";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -48,28 +49,20 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* Group Image Grid */}
-          <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto rounded-3xl overflow-hidden">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img
-                src={portfolio1}
-                alt="Touro Energy Project"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img
-                src={portfolio2}
-                alt="Madam Chocolate Project"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img
-                src={portfolio3}
-                alt="Rio Sparkling Project"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
+          {/* About Text Content */}
+          <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden">
+            <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-border">
+              <div className="space-y-6 text-muted-foreground leading-relaxed text-lg text-center">
+                <p>
+                  At Graphoria, we believe that great design is more than just aesthetics — it's about creating meaningful connections between brands and their audiences.
+                </p>
+                <p>
+                  Our team of passionate creatives works tirelessly to transform ideas into powerful visual stories. From innovative branding solutions to stunning digital experiences, we craft every project with precision and creativity.
+                </p>
+                <p>
+                  Founded with a vision to redefine visual communication, we've grown into a full-service design studio trusted by businesses worldwide. Our commitment to excellence and innovation sets us apart in everything we create.
+                </p>
+              </div>
             </div>
           </div>
         </section>

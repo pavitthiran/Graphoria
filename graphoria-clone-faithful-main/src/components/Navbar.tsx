@@ -48,7 +48,7 @@ const Navbar = () => {
           {isHomePage ? (
             <>
               <a href="#why-matters" className="nav-link" onClick={(e) => scrollToSection(e, "why-matters")}>Our Expertise</a>
-              <a href="#contact" className="nav-link" onClick={(e) => scrollToSection(e, "agency")}>Contact Us</a>
+              <Link to="/contact" className="nav-link">Contact Us</Link>
             </>
           ) : (
             <>
@@ -80,7 +80,7 @@ const Navbar = () => {
           {isHomePage ? (
             <>
               <a href="#why-matters" className="block nav-link" onClick={(e) => { scrollToSection(e, "why-matters"); setMenuOpen(false); }}>Our Expertise</a>
-              <a href="#contact" className="block nav-link" onClick={(e) => { scrollToSection(e, "agency"); setMenuOpen(false); }}>Contact Us</a>
+              <Link to="/contact" className="block nav-link" onClick={() => setMenuOpen(false)}>Contact Us</Link>
             </>
           ) : (
             <>
