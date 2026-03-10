@@ -12,11 +12,11 @@ const projectTypes = [
 
 const budgetRanges = [
   "Select Budget",
-  "Under $1,000",
-  "$1,000 - $5,000",
-  "$5,000 - $10,000",
-  "$10,000 - $25,000",
-  "$25,000+"
+  "Under 1,000rs",
+  "1,000rs - 5,000rs",
+  "5,000rs - 10,000rs",
+  "10,000rs - 25,000rs",
+  "25,000rs+"
 ];
 
 interface FormData {
