@@ -427,7 +427,7 @@ const Contact = () => {
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Email</p>
                       <a href="mailto:hello@graphoria.com" className="text-foreground hover:text-primary transition-colors">
-                        hello@graphoria.com
+                        graphoriacreativitydesign@gmail.com
                       </a>
                     </div>
                   </div>
@@ -442,7 +442,7 @@ const Contact = () => {
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Phone</p>
                       <a href="tel:+919360073899" className="text-foreground hover:text-primary transition-colors">
-                        +91 9360073899
+                        +91 93600 73899
                       </a>
                     </div>
                   </div>
