@@ -16,7 +16,7 @@ Graphoria is a digital design studio platform focused on creating modern, high-q
 - Contact form with backend integration
 - PDF generation for user inquiries
 
-##  Screenshots
+## 📸 Screenshots
 
 ### Home Page
 <p align="center">
