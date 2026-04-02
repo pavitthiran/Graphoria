@@ -1,29 +1,27 @@
-# Graphoria – Design Studio Website
+# Graphoria – Startup Design Studio Website
 
-A full-stack web application for a digital design studio, built using React, TypeScript, Tailwind CSS, and Spring Boot.
+Graphoria is a digital design studio platform focused on creating modern, high-quality web experiences. This project is part of an ongoing startup initiative.
 
 ## Tech Stack
 - Frontend: React, TypeScript, Tailwind CSS
-- Backend: Spring Boot, Java
+- Backend: Spring Boot (Java)
 - Database: PostgreSQL
 
-## Features
-- Responsive UI with modern design
-- Portfolio showcase with filtering
+##  Features
+- Responsive and modern UI design
+- Portfolio showcase with category filtering
 - Contact form with backend integration
-- PDF generation for submitted data
+- PDF generation for user inquiries
 
-## My Role
-- Built frontend UI and reusable components
+##  My Contribution
+- Designed and developed the frontend using React and Tailwind CSS
+- Built reusable UI components and ensured responsive design
 - Integrated frontend with backend APIs
 - Contributed to backend development using Spring Boot
 
-## Run Locally
+##  Running the Project
 
-Frontend:
-npm install  
-npm run dev  
-
-Backend:
-cd backend  
-mvn spring-boot:run  
+### Frontend
+```bash
+npm install
+npm run dev
