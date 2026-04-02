@@ -20,17 +20,17 @@ Graphoria is a digital design studio platform focused on creating modern, high-q
 
 ### Home Page
 <p align="center">
-  <img src="assets/screenshots/home.png" width="800"/>
+  <img src="assets/screenshots/Home.png.png" width="800"/>
 </p>
 
 ### Our Work Section
 <p align="center">
-  <img src="assets/screenshots/work.png" width="800"/>
+  <img src="assets/screenshots/Our work.png.png" width="800"/>
 </p>
 
 ### Contact Page
 <p align="center">
-  <img src="assets/screenshots/contact.png" width="800"/>
+  <img src="assets/screenshots/Contact.png.png" width="800"/>
 </p>
 
 ##  My Contribution
